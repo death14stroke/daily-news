@@ -4,6 +4,8 @@ import { DarkTheme, DefaultTheme, Theme } from '@react-navigation/native';
 import { createTheme } from '@rneui/themed';
 import { DARK_THEME, DEFAULT_THEME } from 'react-native-country-picker-modal';
 
+import { fs } from '@app/utils';
+
 import { Colors } from './colors';
 import { Dimens } from './dimens';
 import { FontFamily } from './typography';
@@ -49,7 +51,7 @@ const listContainerStyle: StyleProp<ViewStyle> = {
 
 const listTitleStyle: StyleProp<TextStyle> = {
 	fontFamily: FontFamily.REGULAR,
-	fontSize: 16
+	fontSize: fs(16)
 };
 
 const BaseComponentsTheme = createTheme({

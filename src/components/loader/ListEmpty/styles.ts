@@ -2,7 +2,7 @@ import { makeStyles } from '@rneui/themed';
 
 import { Dimens, FontFamily } from '@app/styles';
 
-export const useStyles = makeStyles((_, fontSize: number = 16) => ({
+export const useStyles = makeStyles((_, fontSize: number) => ({
 	container: { width: '100%' },
 	animation: { height: '100%' },
 	animationContainer: {

@@ -3,5 +3,8 @@
 	"displayName": "DailyNews",
 	"androidStatusBar": {
 		"backgroundColor": "#030250"
+	},
+	"ios": {
+		"supportsTablet": true
 	}
 }

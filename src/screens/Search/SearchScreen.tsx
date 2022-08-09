@@ -14,6 +14,7 @@ import { usePlatformForSearchBar } from '@app/hooks/platform';
 import { News } from '@app/models';
 import { RootStackParamList } from '@app/navigation';
 import { Dimens } from '@app/styles';
+import { fs } from '@app/utils';
 
 import { useStyles } from './styles';
 
@@ -78,7 +79,7 @@ export const SearchScreen: FC<Props> = ({ navigation }) => {
 		);
 	};
 
-	const renderEmpty = <ListEmpty label='No results found' fontSize={24} />;
+	const renderEmpty = <ListEmpty label='No results found' fontSize={fs(24)} />;
 
 	const renderFooter = <ListLoading isFetching={isFetchingNextPage} />;
 

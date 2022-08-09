@@ -1,6 +1,7 @@
 import { makeStyles } from '@rneui/themed';
 
 import { Dimens, FontFamily } from '@app/styles';
+import { fs } from '@app/utils';
 
 export const useStyles = makeStyles(({ colors }) => ({
 	cardContainer: {
@@ -25,11 +26,11 @@ export const useStyles = makeStyles(({ colors }) => ({
 		top: 0,
 		start: Dimens.PADDING_CONTENT,
 		fontFamily: FontFamily.MEDIUM,
-		fontSize: 16,
+		fontSize: fs(16),
 		color: colors.subtitleColor
 	},
 	description: {
-		fontSize: 14,
+		fontSize: fs(14),
 		textAlignVertical: 'center'
 	}
 }));

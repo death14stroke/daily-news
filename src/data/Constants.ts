@@ -7,3 +7,5 @@ export const DEFAULT_PAGE = 1;
 export const CACHE_MAX_AGE = 10 * 60 * 1000;
 // max-stale = 7 days
 export const CACHE_MAX_STALE = 7 * 24 * 60 * 60 * 1000;
+
+export const FONT_SCALE_FACTOR = 0.3;

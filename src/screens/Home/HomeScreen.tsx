@@ -11,6 +11,7 @@ import { useRecentsQuery } from '@app/hooks/news';
 import { News } from '@app/models';
 import { RootStackParamList } from '@app/navigation';
 import { Dimens } from '@app/styles';
+import { fs } from '@app/utils';
 
 type Props = {
 	navigation: NativeStackNavigationProp<RootStackParamList, 'Root'>;
@@ -42,7 +43,7 @@ export const HomeScreen: FC<Props> = ({ navigation }) => {
 	const renderEmpty = isLoading ? (
 		<SkeletonNewsCard />
 	) : (
-		<ListEmpty label='No recents found' fontSize={24} />
+		<ListEmpty label='No recents found' fontSize={fs(24)} />
 	);
 
 	const getItemLayout = (_: unknown, index: number) => {

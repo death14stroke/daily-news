@@ -1,5 +1,7 @@
 import { makeStyles } from '@rneui/themed';
+import { ms } from 'react-native-size-matters';
 
+import { FONT_SCALE_FACTOR } from '@app/data';
 import { Colors, Dimens, FontFamily } from '@app/styles';
 
 export const useStyles = makeStyles(() => ({
@@ -22,13 +24,13 @@ export const useStyles = makeStyles(() => ({
 	title: {
 		color: Colors.white,
 		padding: Dimens.PADDING_CONTENT,
-		fontSize: 16,
+		fontSize: ms(16, FONT_SCALE_FACTOR),
 		fontFamily: FontFamily.MEDIUM
 	},
 	date: {
 		color: Colors.white,
 		padding: Dimens.PADDING_CONTENT,
-		fontSize: 14,
+		fontSize: ms(14, FONT_SCALE_FACTOR),
 		marginBottom: Dimens.PADDING_CONTENT
 	}
 }));

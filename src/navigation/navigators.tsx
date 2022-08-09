@@ -15,6 +15,7 @@ import {
 	SettingsScreen
 } from '@app/screens';
 import { Colors, FontFamily } from '@app/styles';
+import { fs } from '@app/utils';
 
 import { HomeScreenMenu, transparentHeaderOptions } from './headerOptions';
 import { BottomTabParamList, RootStackParamList, TopTabParamList } from './paramsList';
@@ -44,9 +45,9 @@ export const bottomTabs = () => {
 				headerShadowVisible: false,
 				headerTitleStyle: {
 					fontFamily: FontFamily.MEDIUM,
-					fontSize: 20
+					fontSize: fs(20)
 				},
-				tabBarLabelStyle: { fontFamily: FontFamily.MEDIUM }
+				tabBarLabelStyle: { fontFamily: FontFamily.MEDIUM, fontSize: fs(14) }
 			}}>
 			<BottomTab.Screen
 				name='Home'
@@ -118,7 +119,7 @@ export const topTabs = () => {
 				tabBarScrollEnabled: true,
 				tabBarLabelStyle: {
 					textTransform: 'none',
-					fontSize: 16,
+					fontSize: fs(16),
 					fontFamily: FontFamily.MEDIUM
 				},
 				tabBarItemStyle: { width: 'auto' },

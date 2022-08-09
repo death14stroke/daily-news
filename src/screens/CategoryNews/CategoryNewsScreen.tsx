@@ -9,7 +9,7 @@ import { ListEmpty, ListSeparator, SkeletonSourceCard } from '@app/components/lo
 import { useSourcesQuery } from '@app/hooks/source';
 import { Source } from '@app/models';
 import { Dimens } from '@app/styles';
-import { openUrlInApp } from '@app/utils';
+import { fs, openUrlInApp } from '@app/utils';
 
 import { useStyles } from './styles';
 
@@ -32,7 +32,7 @@ export const CategoryNewsScreen: FC<Props> = ({ category }) => {
 	const renderEmpty = isLoading ? (
 		<SkeletonSourceCard.Vertical />
 	) : (
-		<ListEmpty label='No sources found' fontSize={24} />
+		<ListEmpty label='No sources found' fontSize={fs(24)} />
 	);
 
 	const renderHighlightsList = (

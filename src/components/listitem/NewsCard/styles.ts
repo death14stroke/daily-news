@@ -1,5 +1,7 @@
 import { makeStyles } from '@rneui/themed';
+import { ms } from 'react-native-size-matters';
 
+import { FONT_SCALE_FACTOR } from '@app/data';
 import { Dimens, FontFamily } from '@app/styles';
 
 export const useStyles = makeStyles(({ colors }) => ({
@@ -30,7 +32,7 @@ export const useStyles = makeStyles(({ colors }) => ({
 		color: colors.subtitleColor
 	},
 	title: {
-		fontSize: 16,
+		fontSize: ms(16, FONT_SCALE_FACTOR),
 		fontFamily: FontFamily.MEDIUM
 	}
 }));

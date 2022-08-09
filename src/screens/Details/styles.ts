@@ -1,6 +1,7 @@
 import { makeStyles } from '@rneui/themed';
 
 import { Dimens, FontFamily } from '@app/styles';
+import { fs } from '@app/utils';
 
 export const useStyles = makeStyles(({ colors }) => ({
 	container: {
@@ -19,7 +20,7 @@ export const useStyles = makeStyles(({ colors }) => ({
 		textAlignVertical: 'center'
 	},
 	title: {
-		fontSize: 20,
+		fontSize: fs(20),
 		fontFamily: FontFamily.MEDIUM
 	},
 	authorContainer: {
@@ -32,7 +33,7 @@ export const useStyles = makeStyles(({ colors }) => ({
 	description: {
 		marginBottom: 4 * Dimens.SEPARATOR_ITEM,
 		fontFamily: FontFamily.MEDIUM,
-		fontSize: 18,
+		fontSize: fs(18),
 		lineHeight: 24
 	},
 	content: {

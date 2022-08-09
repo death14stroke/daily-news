@@ -9,6 +9,7 @@ import { BookmarkContext } from '@app/context';
 import { News } from '@app/models';
 import { RootStackParamList } from '@app/navigation';
 import { Dimens } from '@app/styles';
+import { fs } from '@app/utils';
 
 interface Props {
 	navigation: NativeStackNavigationProp<RootStackParamList, 'Root'>;
@@ -28,7 +29,7 @@ export const BookmarksScreen: FC<Props> = ({ navigation }) => {
 		);
 	};
 
-	const renderEmpty = <ListEmpty label='No bookmarks found' fontSize={24} />;
+	const renderEmpty = <ListEmpty label='No bookmarks found' fontSize={fs(24)} />;
 
 	const getItemLayout = (_: unknown, index: number) => {
 		const length = Dimens.CARD_RECENTS.height;
@@ -46,6 +47,7 @@ export const BookmarksScreen: FC<Props> = ({ navigation }) => {
 			data={bookmarks}
 			keyExtractor={(news: News) => news.url}
 			renderItem={renderBookmark}
+			scrollEnabled={bookmarks && bookmarks.length > 0}
 			ListHeaderComponent={ListSeparator.Edge}
 			ItemSeparatorComponent={ListSeparator.Item}
 			ListFooterComponent={ListSeparator.Item}

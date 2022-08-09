@@ -4,6 +4,8 @@ import { StyleProp, View, ViewStyle } from 'react-native';
 import { Text, useTheme } from '@rneui/themed';
 import AnimatedLottieView from 'lottie-react-native';
 
+import { fs } from '@app/utils';
+
 import { useStyles } from './styles';
 
 interface Props {
@@ -12,7 +14,7 @@ interface Props {
 	fontSize?: number;
 }
 
-const EmptyCard: FC<Props> = ({ label, containerStyle, fontSize = 16 }) => {
+const EmptyCard: FC<Props> = ({ label, containerStyle, fontSize = fs(16) }) => {
 	const styles = useStyles(fontSize);
 	const {
 		theme: { lottieResources }
