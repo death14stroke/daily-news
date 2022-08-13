@@ -1,6 +1,6 @@
 # daily-news
 
-News application using React Native and News API in Express JS. Made with Expo and fully compatible on Android and iOS. Currently shows news and sources for India only.
+News application using React Native and News API in Express JS. Made with bare workflow and fully compatible on Android and iOS. Get daily highlights or search through upto 7 different categories of news and top sources avaiable for top countries in the world.
 
 ## See also
 
@@ -13,7 +13,7 @@ News application using React Native and News API in Express JS. Made with Expo a
 npx mkdirp android/app/src/main/assets/ && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 ```
 
-Alternatively, [download]("/outputs/daily-news-debug.apk") the apk.
+Alternatively, [download]("/outputs/daily-news-release.apk") the apk.
 
 ## Outputs
 

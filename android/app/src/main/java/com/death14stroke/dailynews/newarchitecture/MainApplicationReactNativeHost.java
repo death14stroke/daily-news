@@ -1,7 +1,10 @@
-package com.dailynews.newarchitecture;
+package com.death14stroke.dailynews.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
+
+import com.death14stroke.dailynews.newarchitecture.components.MainComponentsRegistry;
+import com.death14stroke.dailynews.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
@@ -19,9 +22,8 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.dailynews.BuildConfig;
-import com.dailynews.newarchitecture.components.MainComponentsRegistry;
-import com.dailynews.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.death14stroke.dailynews.BuildConfig;
+
 import java.util.ArrayList;
 import java.util.List;
 

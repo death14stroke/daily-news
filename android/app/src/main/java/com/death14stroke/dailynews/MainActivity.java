@@ -1,4 +1,4 @@
-package com.dailynews;
+package com.death14stroke.dailynews;
 
 import android.os.Bundle;
 

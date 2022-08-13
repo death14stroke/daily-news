@@ -1,4 +1,4 @@
-package com.dailynews.newarchitecture.modules;
+package com.death14stroke.dailynews.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

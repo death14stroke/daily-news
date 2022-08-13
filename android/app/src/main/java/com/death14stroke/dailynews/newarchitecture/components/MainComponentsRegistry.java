@@ -1,4 +1,4 @@
-package com.dailynews.newarchitecture.components;
+package com.death14stroke.dailynews.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
