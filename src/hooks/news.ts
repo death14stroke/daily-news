@@ -28,6 +28,6 @@ export const useRecentsQuery = () => {
 export const useSearchQuery = (query: string) =>
 	useInfiniteQuery(
 		['search', query],
-		({ pageParam = DEFAULT_PAGE }) => apiSearch({ query, page: pageParam }),
+		({ pageParam = DEFAULT_PAGE, signal }) => apiSearch({ query, page: pageParam }, signal),
 		{ getNextPageParam, enabled: false }
 	);

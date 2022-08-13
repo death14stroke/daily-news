@@ -41,18 +41,18 @@ export const apiHighlights = async ({
 	return data.articles;
 };
 
-export const apiSearch = async ({
-	query,
-	language = DEFAULT_LANGUAGE,
-	page
-}: SearchParams): Promise<News[]> => {
+export const apiSearch = async (
+	{ query, language = DEFAULT_LANGUAGE, page }: SearchParams,
+	signal?: AbortSignal
+): Promise<News[]> => {
 	const { data } = await client.get('/search', {
 		params: {
 			query,
 			language,
 			page,
 			pageSize: PAGE_SIZE
-		}
+		},
+		signal
 	});
 	return data.articles;
 };
